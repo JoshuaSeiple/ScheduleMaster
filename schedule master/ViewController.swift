@@ -20,6 +20,9 @@ class ViewController: UIViewController {
     }
     
     
+    @IBAction func Edit(_ sender: Any) {
+        label.text = "hello!!"
+    }
     @IBOutlet weak var label: UILabel!
 }
 
