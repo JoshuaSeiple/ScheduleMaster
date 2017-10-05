@@ -12,12 +12,14 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        label.text = "hello!!"
     }
 
     @IBAction func AddReminder(_ sender: Any) {
-        print("You've added a reminder!")
+        label.text = "goodbye!!"
     }
     
+    
+    @IBOutlet weak var label: UILabel!
 }
 

@@ -23,7 +23,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Reminders" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1SD-WT-6Sv">
-                                <rect key="frame" x="332" y="20" width="104" height="26"/>
+                                <rect key="frame" x="332" y="18" width="104" height="26"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
                                 <color key="textColor" red="0.69678086770000003" green="0.32864171590000002" blue="0.79027687820000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -38,24 +38,42 @@
                                     <action selector="AddReminder:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GUa-pW-wIK"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j3O-vE-aqj">
-                                <rect key="frame" x="344" y="288" width="46" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j3O-vE-aqj">
+                                <rect key="frame" x="309" y="283" width="150" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="c1R-as-7mH"/>
+                                    <constraint firstAttribute="height" constant="70" id="qih-ct-qvg"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sj6-jy-sEl">
+                                <rect key="frame" x="349" y="435" width="70" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="bym-MN-b4f"/>
+                                    <constraint firstAttribute="width" constant="70" id="h1H-J6-FJF"/>
+                                </constraints>
+                                <state key="normal" title="Edit"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.11984491029001425" green="0.0" blue="0.17655035621761661" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="sj6-jy-sEl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1hw-KC-B3I"/>
                             <constraint firstItem="siJ-A4-VNn" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" constant="5" id="4dM-BB-nFi"/>
                             <constraint firstItem="1SD-WT-6Sv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7R3-E5-kRn"/>
+                            <constraint firstItem="j3O-vE-aqj" firstAttribute="top" secondItem="1SD-WT-6Sv" secondAttribute="bottom" constant="239" id="7af-xa-GH9"/>
                             <constraint firstItem="1SD-WT-6Sv" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="20" id="7wH-hP-tw6"/>
+                            <constraint firstItem="j3O-vE-aqj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Abf-hL-rRD"/>
                             <constraint firstItem="siJ-A4-VNn" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" constant="5" id="RnZ-eP-Omh"/>
                             <constraint firstItem="siJ-A4-VNn" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="4" id="S0c-Se-Umj"/>
+                            <constraint firstItem="sj6-jy-sEl" firstAttribute="top" secondItem="j3O-vE-aqj" secondAttribute="bottom" constant="82" id="ciC-7u-URL"/>
                             <constraint firstItem="siJ-A4-VNn" firstAttribute="leading" secondItem="1SD-WT-6Sv" secondAttribute="trailing" constant="266" id="eJg-Lu-KDJ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="label" destination="j3O-vE-aqj" id="3e1-Q9-nGz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
