@@ -9,7 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    let list: [String] = []
+    var list: [String] = []
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return(list.count)
@@ -25,6 +25,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
 
+    @IBOutlet weak var tableView: UITableView!
     
     
     override func viewDidLoad() {
@@ -32,7 +33,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
 
     @IBAction func AddReminder(_ sender: Any) {
-        print("teset")
+        list.append(textAdd.text!)
+        tableView.reloadData()
+        textAdd.text = ""
     }
     
     
