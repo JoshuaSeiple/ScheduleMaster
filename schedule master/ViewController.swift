@@ -12,17 +12,16 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        label.text = "hello!!"
     }
 
     @IBAction func AddReminder(_ sender: Any) {
-        label.text = "goodbye!!"
+    
     }
     
     
     @IBAction func Edit(_ sender: Any) {
-        label.text = "hello!!"
+
     }
-    @IBOutlet weak var label: UILabel!
+    
 }
 
