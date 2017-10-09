@@ -9,10 +9,13 @@
 import UIKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    let list = ["Milk", "Honey", "Bread", "Tacos", "Tomatoes"]
+    let list: [String] = []
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return(list.count)
     }
+    
+    @IBOutlet weak var textAdd: UITextField!
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "cell")
@@ -29,7 +32,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
 
     @IBAction func AddReminder(_ sender: Any) {
-    
+        print("teset")
     }
     
     
@@ -37,5 +40,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     }
     
+}
+
+
+extension ViewController : UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
 }
 
