@@ -36,6 +36,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         list.append(textAdd.text!)
         tableView.reloadData()
         textAdd.text = ""
+        textAdd.resignFirstResponder()
     }
     
     
@@ -46,11 +47,4 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 }
 
 
-extension ViewController : UITextFieldDelegate {
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        return true
-    }
-}
 
